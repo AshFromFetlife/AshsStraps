@@ -2,7 +2,13 @@ A system of 3D printable flexible straps, suitable to be interconnected into int
 
 This squishmellow aint going nowhere:
 
-~[A squishmellow held down with 4 straps](photo1.png)
+![A squishmellow held down with 4 straps](photo1.jpg)
+
+To connect these together - rotate down 90 degrees, 
+then twist 90 degrees, and shove the prong into the
+socket, reverse the twist, and then rotate flat.
+
+![How to install animation](howtojoin.webp)
 
 # Get the STLs:
 
@@ -12,7 +18,8 @@ The STL files are ~20gb, so aren't offered as a download, it's quicker to build 
 2. extract it somewhere handy
 3. download and install Python from python.org.
 4. (optional) Download and install OpenSCAD. 
-  - If the latest version is 2021.01, then download the nightly build instead, and enable the new Manifold geometry engine in preferences, it's 100x faster.
+  
+If the latest version is 2021.01, then download the nightly build instead, and enable the new Manifold geometry engine in preferences, it's 100x faster.
 
 ### Windows users:
 
@@ -45,4 +52,10 @@ Configure your slicer:
 
 Avoid brim and raft modes, these create sharp points which can damage whatever it
 is you wish to immobilise.
+
+I've tested this sliced with Cura 5.6 and printed on:
+- Elegoo Neptune Max 4
+- Anycubic i3 Chiron
+
+![Printing in CURA](3DPrinter1.png)
 
