@@ -41,8 +41,10 @@ TARGETS = [
     *({"fileIn": "joinerRegPoly.scad", "N": n,
        "fileOut": f"joinerRegPoly{n}.stl"} for n in range(2, 7)),
     *({"fileIn": "joiner2.scad", "N": n, "fileOut": f"joiner2{n}.stl"} for n in [1,4,9,16]),
+    *({"fileIn": "joiner4.scad", "N": n, "fileOut": f"joiner4{n}.stl"} for n in [1,4,9,16]),
+    *({"fileIn": "joinerHouse.scad", "N": n, "fileOut": f"joinerHouse{n}.stl"} for n in [1,4,9,16]),
+    *({"fileIn": "limbMiddle.scad", "N": n, "fileOut": f"joinerMid{n}.stl"} for n in [2,3,4]),
     {"fileIn": "WideStrapJoiner.scad", "fileOut": "WideStrapJoiner.stl"},
-    {"fileIn": "limbMiddle.scad", "fileOut": "limbMiddle.stl"},
     {"fileIn": "upperChest.scad", "fileOut": "upperChest.stl"},
 ]
 

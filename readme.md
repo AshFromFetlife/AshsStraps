@@ -12,14 +12,14 @@ socket, reverse the twist, and then rotate flat.
 
 # Get the STLs:
 
-The STL files are ~20gb, so aren't offered as a download, it's quicker to build the stl's from the raw specs. 
+The STL files are ~70gb, so aren't offered as a download, it's quicker to build the stl's from the raw specs. 
 
-1. Download the codebase.
-2. extract it somewhere handy
-3. download and install Python from python.org.
+1. Download the codebase by pressing "<>Code" -> "Download Zip"
+2. Extract it somewhere handy
+3. Download and install Python from python.org.
 4. (optional) Download and install OpenSCAD. 
   
-If the latest version is 2021.01, then download the nightly build instead, and enable the new Manifold geometry engine in preferences, it's 100x faster.
+Rather than download OpenSCAD 2021.01, download the nightly build instead, and enable the new Manifold geometry engine in preferences, it's 100x faster.
 
 ### Windows users:
 

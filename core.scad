@@ -93,6 +93,41 @@ module joiner2()
   }
 }
 
+module joiner4()
+{
+  difference()
+  {
+    face(l = 40);
+
+    translate([0, -13, 0]) female(locked = false);
+    translate([0, 13, 0]) rotate([0, 0, 180]) female(locked = false);
+
+    translate([-18, 0, 0]) rotate([0, 0, -90]) female(locked = false);
+    translate([18, 0, 0]) rotate([0, 0, 90]) female(locked = false);
+  }
+}
+
+module joinerHouse()
+{
+  difference()
+  {
+    hull()
+    {
+      face(l = 40);
+      translate([0,20,0]) face(l = 50,w=5);
+    }
+
+    translate([0, -13, 0]) female(locked = false);
+
+    translate([-18, 0, 0]) rotate([0, 0, -90]) female(locked = false);
+    translate([18, 0, 0]) rotate([0, 0, 90]) female(locked = false);
+
+    translate([-10, 28, 0]) rotate([0, 0, 225]) female(locked = false);
+    translate([10, 28, 0]) rotate([0, 0, -225]) female(locked = false);
+  }
+}
+
+
 module joinerLimb(c = 2)
 {
   difference()

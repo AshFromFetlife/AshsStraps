@@ -1,2 +1,4 @@
 include <core.scad>
-joinerLimb();
+N =2;
+
+joinerLimb(N-1);
