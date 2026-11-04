@@ -35,7 +35,7 @@ difference()
         }
         sphere(r = cd);
     }
-    translate([0,Y/2+2.5+2,-12]) rotate([90,0,0])female(false);
+    translate([0,Y/2+2.5+2,-12]) rotate([90,0,180])female(false);
     translate([0,Y/2+2.5+2,12]) rotate([-90,0,0])female(false);
     
   if(subtractDrillHole) for (x = [-X/2-20, X/2+20]) translate([x,-Y/2+5,0]) rotate([-90,0,0])
