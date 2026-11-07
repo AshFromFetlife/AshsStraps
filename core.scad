@@ -88,8 +88,8 @@ module joiner2()
   {
     face(l = 40);
 
-    translate([0, -12, 0]) female(locked = false);
-    translate([0, 12, 0]) rotate([0, 0, 180]) female(locked = false);
+    translate([0, -14, 0]) female(locked = false);
+    translate([0, 14, 0]) rotate([0, 0, 180]) female(locked = false);
   }
 }
 
@@ -99,8 +99,8 @@ module joiner4()
   {
     face(l = 40);
 
-    translate([0, -13, 0]) female(locked = false);
-    translate([0, 13, 0]) rotate([0, 0, 180]) female(locked = false);
+    translate([0, -14, 0]) female(locked = false);
+    translate([0, 14, 0]) rotate([0, 0, 180]) female(locked = false);
 
     translate([-18, 0, 0]) rotate([0, 0, -90]) female(locked = false);
     translate([18, 0, 0]) rotate([0, 0, 90]) female(locked = false);
@@ -117,7 +117,7 @@ module joinerHouse()
       translate([0,20,0]) face(l = 50,w=5);
     }
 
-    translate([0, -13, 0]) female(locked = false);
+    translate([0, -14, 0]) female(locked = false);
 
     translate([-18, 0, 0]) rotate([0, 0, -90]) female(locked = false);
     translate([18, 0, 0]) rotate([0, 0, 90]) female(locked = false);
@@ -140,9 +140,12 @@ module joinerLimb(c = 2)
 
     for(a = [0:1:c])
     {
-      translate([15, 70 * a -35 * c, 0]) rotate([0, 0, 90])
+      translate([15, 70 * a -35 * c, 0]) 
+      rotate([0, 0, 90])
         female(locked = false);
-      translate([-15, 70 * a -35 * c, 0]) rotate([0, 0, -90])
+
+      translate([-15, 70 * a -35 * c, 0]) 
+      rotate([0, 0, -90])
         female(locked = false);
     }
 
