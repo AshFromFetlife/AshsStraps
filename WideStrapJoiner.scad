@@ -2,7 +2,7 @@ include <core.scad>
 
 N = 0;
 
-if (N==0)
+if(N == 0)
 {
   veryWideJoiner();
 }

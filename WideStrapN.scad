@@ -1,4 +1,5 @@
 include <core.scad>
+
 N = 4;
 
-veryWideStrap(N - 1);
+veryWideStrap(N -1);

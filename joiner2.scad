@@ -1,4 +1,6 @@
-include <core.scad>
+include <core.scad>;
+
+$fn = $preview ? 12 : 25;
 N = 1;
 S = sqrt(N);
 

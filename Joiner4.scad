@@ -1,6 +1,7 @@
 include <core.scad>
 N = 1;
 S = sqrt(N);
+$fn = $preview ? 12 : 30;
 
 for(x = [0:1:S -1]) for(y = [0:1:S -1])
 {

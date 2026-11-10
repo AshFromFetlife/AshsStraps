@@ -114,7 +114,7 @@ module joinerHouse()
     hull()
     {
       face(l = 40);
-      translate([0,20,0]) face(l = 50,w=5);
+      translate([0, 20, 0]) face(l = 50, w = 5);
     }
 
     translate([0, -14, 0]) female(locked = false);
@@ -126,7 +126,6 @@ module joinerHouse()
     translate([10, 28, 0]) rotate([0, 0, -225]) female(locked = false);
   }
 }
-
 
 module joinerLimb(c = 2)
 {
@@ -140,12 +139,10 @@ module joinerLimb(c = 2)
 
     for(a = [0:1:c])
     {
-      translate([15, 70 * a -35 * c, 0]) 
-      rotate([0, 0, 90])
+      translate([15, 70 * a -35 * c, 0]) rotate([0, 0, 90])
         female(locked = false);
 
-      translate([-15, 70 * a -35 * c, 0]) 
-      rotate([0, 0, -90])
+      translate([-15, 70 * a -35 * c, 0]) rotate([0, 0, -90])
         female(locked = false);
     }
 
@@ -262,24 +259,23 @@ module veryWideStrap(additionalPannels = 6)
 module corsetHalf()
 {
   dx = [0, 5, 15, 30, 50, 75, 85];
-  
-  for (i =[0:1:6])
+
+  for(i = [0:1:6])
   {
     translate([dx[i], 50 * i, 0]) union()
-   {
-   
-        for(l = veryWideLinks) translate([l, i == 0 ?-14:0, 0])
+    {
+
+      for(l = veryWideLinks) translate([l, i == 0 ?-14:0, 0])
         rotate([0, 0, i == 0 ? 180:0]) male();
-        
+
       difference()
       {
         translate([0, 18, 0]) face(45, 300);
         if(i) for(l = veryWideLinks) translate([l, 0, 0]) female(true);
-        
       }
+    }
   }
-  }
-  
+
   for(l = veryWideLinks) translate([l + dx[6], 6 * 50 + 50, 0]) male();
 }
 
@@ -321,7 +317,7 @@ module veryWideJoiner(screwHoles = true)
     translate([-75, 0, 0]) cube([60, 100, 3], center = true);
     translate([75, 0, 0]) cube([60, 100, 3], center = true);
 
-    if (screwHoles) for(x = [120, 0, -120]) translate([x, 18, 0])
+    if(screwHoles) for(x = [120, 0, -120]) translate([x, 18, 0])
     {
       cylinder(d = 6.5, h = 15, center = true);
       translate([0, 0, 5]) cylinder(d = 16.5, h = 15, center = true);
@@ -343,8 +339,8 @@ module veryWideJoinerUp()
       translate([0, 18, 0]) face(45, 300);
       translate([0, 0, 30]) face(10, 300);
     }
-    
-    for(l = veryWideLinks) translate([l, 0, 30]) rotate([-90,0,0])
+
+    for(l = veryWideLinks) translate([l, 0, 30]) rotate([-90, 0, 0])
     {
       female(true);
       hull()
@@ -358,18 +354,19 @@ module veryWideJoinerUp()
         scale([3, 1, 1]) sphere(d = 6.1, $fn = fn2);
       }
     }
-    
+
     translate([-75, 20, 0]) cube([60, 50, 3], center = true);
     translate([75, 20, 0]) cube([60, 50, 3], center = true);
-    translate([-75, 0, 20]) rotate([100,0,0]) cube([60, 50, 3], center = true);
-    translate([75, 0, 20]) rotate([100,0,0]) cube([60, 50, 3], center = true);
+    translate([-75, 0, 20]) rotate([100, 0, 0])
+      cube([60, 50, 3], center = true);
+    translate([75, 0, 20]) rotate([100, 0, 0]) cube([60, 50, 3], center = true)
+      ;
 
     for(x = [120, 0, -120]) translate([x, 18, 0])
     {
       cylinder(d = 6.5, h = 15, center = true);
       translate([0, 0, 75]) cylinder(d = 16.5, h = 150, center = true);
     }
-
   }
 }
 
