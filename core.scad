@@ -134,15 +134,15 @@ module joinerLimb(c = 2)
     w = 40 + 80 * c;
 
     face(w);
-    translate([0, -10 -40 * c, 0]) rotate([0, 0, 0]) female(locked = false);
-    translate([0, 10 + 40 * c, 0]) rotate([0, 0, 180]) female(locked = false);
+    translate([0, -13 -40 * c, 0]) rotate([0, 0, 0]) female(locked = false);
+    translate([0, 13 + 40 * c, 0]) rotate([0, 0, 180]) female(locked = false);
 
     for(a = [0:1:c])
     {
-      translate([15, 70 * a -35 * c, 0]) rotate([0, 0, 90])
+      translate([17, 70 * a -35 * c, 0]) rotate([0, 0, 90])
         female(locked = false);
 
-      translate([-15, 70 * a -35 * c, 0]) rotate([0, 0, -90])
+      translate([-17, 70 * a -35 * c, 0]) rotate([0, 0, -90])
         female(locked = false);
     }
 
